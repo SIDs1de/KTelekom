@@ -7,5 +7,29 @@
 
 @font-face {
   font-family: 'Cera Round Pro';
-  src: url();
+  font-weight: regular;
+  font-style: normal;
+  src: url('../fonts/CeraRoundPro/TypeMates - CeraRoundPro-Regular.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'Cera Round Pro';
+  font-weight: medium;
+  font-style: normal;
+  src: url('../fonts/CeraRoundPro/TypeMates - CeraRoundPro-Medium.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'Cera Round Pro';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/CeraRoundPro/TypeMates - CeraRoundPro-Bold.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans/OpenSans.ttf') format('truetype');
 }

@@ -34,7 +34,7 @@ function images() {
 }
 
 function scripts() {
-  return src(['src/js/*.js', '!src/js/main.min.js'])
+  return src(['src/js/main.js'])
     .pipe(sourcemaps.init())
     .pipe(
       babel({
@@ -77,8 +77,8 @@ function build() {
       'src/css/**/*.css',
       'src/fonts/**/*',
       'src/js/**/*.js',
-      '!src/js/main.js',
       'src/images/**/*',
+      'src/**/*.html'
     ],
     { base: 'src' }
   ).pipe(dest('public'))

@@ -1,0 +1,109 @@
+.logo {
+  width: 100%;
+  @include adaptive-value('max-width', 147, 135, 1);
+  @media (min-width: 968px) {
+    &:hover {
+      .logo__img {
+        #Vector:nth-last-child(1),
+        #Vector:nth-last-child(2) {
+          filter: brightness(200%);
+        }
+      }
+    }
+  }
+
+  .logo__img {
+    #Vector:nth-last-child(1),
+    #Vector:nth-last-child(2) {
+      transition: 0.1s;
+    }
+  }
+  &__link {
+  }
+  &__img {
+    width: 100%;
+  }
+}
+
+.h2 {
+  color: $text;
+  @include adaptive-value('font-size', 28, 18, 1);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 2%;
+}
+
+label {
+  @media (min-width: 968px) {
+    &:hover {
+      .fake-checkbox {
+        transition:
+          border-color 0.3s,
+          background-color 0.1s;
+        border-color: $main-hovered;
+      }
+    }
+  }
+}
+
+.fake-checkbox {
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  border-radius: 2px;
+  border: 2px solid rgba($text, 0.1);
+  cursor: pointer;
+  transition: 0.1s;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__img {
+    width: 8.74px;
+    display: inline-block;
+    transform: translate(1px, 0.5px);
+    opacity: 0;
+    transition: 0.1s;
+  }
+  &._active {
+    background-color: $main-hovered;
+    border-color: $main-hovered;
+    .fake-checkbox__img {
+      opacity: 1;
+    }
+  }
+  &._focused {
+    outline: 3px solid $main-hovered;
+  }
+}
+
+.main-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  @include adaptive-value('padding-top', 12, 11, 1);
+  @include adaptive-value('padding-bottom', 12, 11, 1);
+  @include adaptive-value('padding-left', 40, 20, 1);
+  @include adaptive-value('padding-right', 40, 20, 1);
+  text-align: center;
+  max-width: 251px;
+  width: 100%;
+  cursor: pointer;
+  background-color: $main;
+  border-radius: 5px;
+  border: none;
+  transition: 0.15s;
+  @media (min-width: 968px) {
+    &:hover {
+      background-color: $main-hovered;
+    }
+  }
+  @media (min-width: 968px) {
+    &:active {
+      transition: 0s;
+      transform: scale(0.97);
+    }
+  }
+}

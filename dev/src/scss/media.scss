@@ -1,0 +1,78 @@
+// Здесь находятся все медиазапросы, вынесены в отдельный файл для удобства
+@media (max-width: 700px) {
+  .connect {
+    &__form-row {
+      &:nth-child(1) {
+        flex-direction: column;
+      }
+    }
+    &__input {
+      margin-right: 0;
+      max-width: 400px;
+      &:nth-child(1) {
+        max-width: 400px;
+      }
+    }
+    &__input + &__input {
+      margin-top: 10px;
+    }
+    &__btn {
+      max-width: 400px;
+      margin-top: 15px;
+    }
+  }
+}
+@media (min-width: 561px) {
+  .phone-nav {
+    display: none;
+  }
+  .header {
+    &__burger {
+      display: none;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .logo {
+    z-index: 11;
+  }
+  .burger {
+    z-index: 11;
+  }
+  .header {
+    &__nav {
+      display: none;
+    }
+  }
+  .economy {
+    &__big-img-wrapper {
+      position: relative;
+      transform: translate(0);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptive-value('margin-bottom', 20, 10, 1);
+    }
+  }
+  .footer {
+    &__left {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__copy {
+      margin-top: 5px;
+      margin-left: 0;
+      @include adaptive-value('max-width', 147, 125, 1);
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .economy {
+    &__link {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
